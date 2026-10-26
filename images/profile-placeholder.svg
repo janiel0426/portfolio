@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="460" fill="#f8fafc"/>
+  <rect x="12" y="12" width="336" height="436" rx="16" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="6 6"/>
+  <circle cx="180" cy="180" r="70" fill="url(#avatarGrad)" opacity="0.85"/>
+  <path d="M90 350 C90 270, 270 270, 270 350 Z" fill="url(#avatarGrad)" opacity="0.85"/>
+  <rect x="50" y="380" width="260" height="36" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="180" y="403" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" fill="#0f172a">Save profile photo as images/profile.png</text>
+</svg>

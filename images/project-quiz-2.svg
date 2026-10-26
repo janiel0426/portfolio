@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <rect width="600" height="360" fill="#f1f5f9"/>
+  <rect x="20" y="20" width="560" height="320" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="20" y="20" width="560" height="36" rx="10" fill="#e2e8f0"/>
+  <rect x="20" y="46" width="560" height="10" fill="#e2e8f0"/>
+  <circle cx="42" cy="38" r="6" fill="#f87171"/>
+  <circle cx="60" cy="38" r="6" fill="#fbbf24"/>
+  <circle cx="78" cy="38" r="6" fill="#34d399"/>
+  <rect x="100" y="28" width="400" height="20" rx="5" fill="#ffffff"/>
+  <text x="110" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#64748b">https://your-portfolio.example/quiz-2</text>
+  <rect x="50" y="80" width="500" height="230" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <g transform="translate(276, 125)">
+    <rect x="0" y="0" width="48" height="48" rx="8" fill="#f0fdfa" stroke="#0f766e" stroke-width="2"/>
+    <path d="M12 18h24M12 24h18M12 30h12" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="300" y="205" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#0a192f">Quiz 2 Screenshot Placeholder</text>
+  <text x="300" y="230" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#64748b">Replace with your coursework screenshot (e.g. images/quiz-2.png)</text>
+  <text x="300" y="250" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Recommended aspect ratio: 16:10 or 16:9 (600 &times; 360 px)</text>
+</svg>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz 1: Item Manager (WPF) | Janiel P. Jaralve</title>
+<style>
+:root{--bg:#8fd6cd;--card:#fff;--ink:#0f172a;--muted:#475569;--brand:#0f766e;--tint:#e6f7f4;--line:#d9e2ec;--code-bg:#0f172a;--code-ink:#e2e8f0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#8fd6cd,#b3e8e0);color:var(--ink);line-height:1.6;min-height:100vh}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:600;text-decoration:none;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,.7);margin-bottom:20px;min-height:44px}
+.back:hover{background:#fff}
+.back:focus-visible,.copy:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+header{margin-bottom:20px}
+.badge{display:inline-block;background:var(--tint);color:var(--brand);border:1px solid #b6e6df;font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:999px}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin:10px 0 6px}
+.sub{color:#1e3a3a;max-width:62ch}
+.panel{background:var(--card);border-radius:20px;padding:20px;margin-top:20px;box-shadow:0 6px 24px rgba(15,118,110,.12)}
+h2{font-size:1.25rem;margin-bottom:12px}
+video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000;border-radius:12px}
+.note{color:var(--muted);font-size:.95rem;margin-top:10px}
+.codehead{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#1e293b;color:#cbd5e1;border-radius:12px 12px 0 0;padding:8px 8px 8px 14px;font-family:Consolas,"Courier New",monospace;font-size:.9rem}
+.copy{background:#334155;color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;font-family:"Segoe UI",system-ui,sans-serif;font-weight:600;cursor:pointer;min-height:36px}
+.copy:hover{background:#475569}
+pre{background:var(--code-bg);color:var(--code-ink);border-radius:0 0 12px 12px;padding:16px;overflow-x:auto;font-size:.88rem;line-height:1.55;margin-bottom:22px;tab-size:4}
+pre:last-of-type{margin-bottom:0}
+code{font-family:Consolas,"Courier New",monospace}
+ul{padding-left:1.2rem;color:var(--muted)}
+li+li{margin-top:6px}
+@media (max-width:600px){.panel{padding:16px;border-radius:16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="../index.html#projects">&larr; Back to Projects</a>
+
+  <header>
+    <span class="badge">Quiz 1 Coursework</span>
+    <h1>Item Manager: WPF desktop app</h1>
+    <p class="sub">A small Windows app that adds and removes items in a list, with warnings for empty input and for removing when nothing is selected.</p>
+  </header>
+
+  <section class="panel" aria-labelledby="demo-title">
+    <h2 id="demo-title">Demo video</h2>
+    <video controls muted playsinline preload="metadata" aria-label="Demo of the Item Manager WPF app">
+      <source src="../video/quiz1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="note">Shows adding items, removing a selected item, and the warning messages.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="code-title">
+    <h2 id="code-title">Source code</h2>
+
+    <div class="codehead"><span>MainWindow.xaml</span><button class="copy" type="button" data-target="xaml">Copy</button></div>
+<pre><code id="xaml">&lt;Window x:Class=&quot;ItemManagerApp.MainWindow&quot;
+        xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+        xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+        Title=&quot;Item Manager&quot; Height=&quot;350&quot; Width=&quot;400&quot; Background=&quot;#f5f57f&quot;&gt;
+    &lt;Grid Margin=&quot;10&quot; Background=&quot;#f5f57f&quot;&gt;
+        &lt;Grid.RowDefinitions&gt;
+            &lt;RowDefinition Height=&quot;Auto&quot;/&gt;
+            &lt;RowDefinition Height=&quot;61*&quot;/&gt;
+            &lt;RowDefinition Height=&quot;10*&quot;/&gt;
+        &lt;/Grid.RowDefinitions&gt;
+
+        &lt;!-- Input and Add Button --&gt;
+        &lt;StackPanel Orientation=&quot;Horizontal&quot; Grid.Row=&quot;0&quot; Margin=&quot;0,0,0,10&quot;
+                    Background=&quot;#f5f57f&quot;&gt;
+            &lt;TextBox x:Name=&quot;ItemTextBox&quot; Width=&quot;250&quot; Background=&quot;#8f8f89&quot;
+                     Margin=&quot;0,0,10,0&quot;
+                     Foreground=&quot;#f2f2ed&quot; Text=&quot;Enter new item...&quot;
+                     GotFocus=&quot;ItemTextBox_GotFocus&quot;
+                     LostFocus=&quot;ItemTextBox_LostFocus&quot;/&gt;
+            &lt;Button Content=&quot;Add Item&quot; Foreground=&quot;#fff&quot; Background=&quot;#030303&quot;
+                    FontFamily=&quot;Tahoma&quot; Width=&quot;100&quot; Click=&quot;AddItem_Click&quot;/&gt;
+        &lt;/StackPanel&gt;
+
+        &lt;!-- ListBox for displaying items --&gt;
+        &lt;ListBox x:Name=&quot;ItemListBox&quot; Background=&quot;#8f8f89&quot; Grid.Row=&quot;1&quot;/&gt;
+
+        &lt;!-- Remove Button --&gt;
+        &lt;Button Content=&quot;Remove Item&quot; Foreground=&quot;#fff&quot; Background=&quot;#030303&quot;
+                FontFamily=&quot;Tahoma&quot; Grid.Row=&quot;2&quot; Height=&quot;30&quot; Margin=&quot;0,10,0,0&quot;
+                HorizontalAlignment=&quot;Right&quot; Width=&quot;100&quot; Click=&quot;RemoveItem_Click&quot;/&gt;
+    &lt;/Grid&gt;
+&lt;/Window&gt;
+</code></pre>
+
+    <div class="codehead"><span>MainWindow.xaml.cs</span><button class="copy" type="button" data-target="cs">Copy</button></div>
+<pre><code id="cs">using System.Windows;
+using System.Windows.Media;
+
+namespace ItemManagerApp
+{
+    public partial class MainWindow : Window
+    {
+        private const string PlaceholderText = &quot;Enter new item...&quot;;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            SetPlaceholder(); // Set placeholder initially
+        }
+
+        private void AddItem_Click(object sender, RoutedEventArgs e)
+        {
+            string newItem = ItemTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(newItem) || newItem == PlaceholderText)
+            {
+                MessageBox.Show(&quot;Please enter a valid item.&quot;, &quot;Input Error&quot;,
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            ItemListBox.Items.Add(newItem);
+            SetPlaceholder();
+        }
+
+        private void RemoveItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (ItemListBox.SelectedItem == null)
+            {
+                MessageBox.Show(&quot;Please select an item to remove.&quot;, &quot;Selection Error&quot;,
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
+            ItemListBox.Items.Remove(ItemListBox.SelectedItem);
+        }
+
+        private void ItemTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (ItemTextBox.Text == PlaceholderText)
+            {
+                ItemTextBox.Text = &quot;&quot;;
+                ItemTextBox.Foreground = Brushes.Black;
+            }
+        }
+
+        private void ItemTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(ItemTextBox.Text))
+            {
+                SetPlaceholder();
+            }
+        }
+
+        private void SetPlaceholder()
+        {
+            ItemTextBox.Text = PlaceholderText;
+            ItemTextBox.Foreground = Brushes.Gray;
+        }
+    }
+}
+</code></pre>
+  </section>
+
+  <section class="panel" aria-labelledby="how-title">
+    <h2 id="how-title">What I did</h2>
+    <ul>
+      <li>Built the window layout in XAML using Grid, StackPanel, TextBox, ListBox and Buttons.</li>
+      <li>Wrote the C# click handlers that add and remove items.</li>
+      <li>Added validation with warning message boxes for empty input and for nothing selected.</li>
+      <li>Added placeholder text using the GotFocus and LostFocus events.</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+document.querySelectorAll(".copy").forEach(function(btn){
+  btn.addEventListener("click",function(){
+    var text=document.getElementById(btn.dataset.target).textContent;
+    var done=function(){btn.textContent="Copied";setTimeout(function(){btn.textContent="Copy"},1500)};
+    if(navigator.clipboard){navigator.clipboard.writeText(text).then(done).catch(function(){})}
+  });
+});
+</script>
+</body>
+</html>

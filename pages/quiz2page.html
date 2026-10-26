@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cebu Eastern College - Website &amp; Portal | Janiel P. Jaralve</title>
+<style>
+:root{--bg:#8fd6cd;--card:#fff;--ink:#0f172a;--muted:#475569;--brand:#0f766e;--tint:#e6f7f4;--line:#d9e2ec;--code-bg:#0f172a;--code-ink:#e2e8f0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#8fd6cd,#b3e8e0);color:var(--ink);line-height:1.6;min-height:100vh}
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:600;text-decoration:none;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,.7);margin-bottom:20px;min-height:44px}
+.back:hover{background:#fff}
+.back:focus-visible,.copy:focus-visible,summary:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+header{margin-bottom:20px}
+.badge{display:inline-block;background:var(--tint);color:var(--brand);border:1px solid #b6e6df;font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:999px}
+h1{font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin:10px 0 6px}
+.sub{color:#1e3a3a;max-width:62ch}
+.panel{background:var(--card);border-radius:20px;padding:20px;margin-top:20px;box-shadow:0 6px 24px rgba(15,118,110,.12)}
+h2{font-size:1.25rem;margin-bottom:12px}
+video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000;border-radius:12px}
+.note{color:var(--muted);font-size:.95rem;margin-top:10px}
+.codehead{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#1e293b;color:#cbd5e1;border-radius:12px 12px 0 0;padding:8px 8px 8px 14px;font-family:Consolas,"Courier New",monospace;font-size:.9rem}
+.copy{background:#334155;color:#fff;border:0;border-radius:8px;padding:8px 14px;font:inherit;font-family:"Segoe UI",system-ui,sans-serif;font-weight:600;cursor:pointer;min-height:36px}
+.copy:hover{background:#475569}
+pre{background:var(--code-bg);color:var(--code-ink);border-radius:0 0 12px 12px;padding:16px;overflow-x:auto;font-size:.88rem;line-height:1.55;margin-bottom:22px;tab-size:4}
+pre:last-of-type{margin-bottom:0}
+pre.tall{max-height:560px;overflow:auto}
+code{font-family:Consolas,"Courier New",monospace}
+ul{padding-left:1.2rem;color:var(--muted)}
+li+li{margin-top:6px}
+@media (max-width:600px){.panel{padding:16px;border-radius:16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <a class="back" href="../index.html#projects">&larr; Back to Projects</a>
+
+  <header>
+    <span class="badge">Project Capstone</span>
+    <h1>Cebu Eastern College - Website &amp; Portal</h1>
+    <p class="sub">A school website providing Cebu Eastern College information and easy access to academic resources and services.</p>
+  </header>
+
+  <section class="panel" aria-labelledby="demo-title">
+    <h2 id="demo-title">Demo video</h2>
+    <video controls muted playsinline preload="metadata" aria-label="Demo of the Cebu Eastern College website and portal">
+      <source src="../video/quiz2.1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="note">School Website Design and Academic Portal Development.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="code-title">
+    <h2 id="code-title">Source code</h2>
+
+    <div class="codehead"><span>index.html</span><button class="copy" type="button" data-target="code-index">Copy</button></div>
+<pre class="tall"><code id="code-index">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;title&gt;Cebu Eastern College — Official Website &amp; Portal&lt;/title&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Welcome Cebu Easternians to the official website and student portal of Cebu Eastern College.&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body id=&quot;mainBody&quot;&gt;
+
+&lt;!-- TOP BRANDING HEADER (Centered logo from demo video) --&gt;
+&lt;header class=&quot;site-header&quot;&gt;
+    &lt;a href=&quot;index.html&quot; class=&quot;logo-container&quot; aria-label=&quot;Cebu Eastern College Home&quot;&gt;
+    &lt;!-- Embedded SVG for immediate rendering without external dependencies --&gt;
+    &lt;svg class=&quot;school-logo&quot; viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;48&quot; fill=&quot;#FFFFFF&quot; stroke=&quot;#080078&quot; stroke-width=&quot;4&quot;/&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;42&quot; fill=&quot;none&quot; stroke=&quot;#dc2626&quot; stroke-width=&quot;2&quot; stroke-dasharray=&quot;4,2&quot;/&gt;
+        &lt;polygon points=&quot;50,15 62,38 88,38 67,54 75,78 50,62 25,78 33,54 12,38 38,38&quot; fill=&quot;#fbbf24&quot; stroke=&quot;#080078&quot; stroke-width=&quot;1.5&quot;/&gt;
+        &lt;path d=&quot;M 30,50 A 20,20 0 0,0 70,50&quot; fill=&quot;none&quot; stroke=&quot;#080078&quot; stroke-width=&quot;3&quot;/&gt;
+        &lt;text x=&quot;50&quot; y=&quot;88&quot; text-anchor=&quot;middle&quot; font-size=&quot;8&quot; font-weight=&quot;bold&quot; fill=&quot;#080078&quot;&gt;EST. 1915&lt;/text&gt;
+    &lt;/svg&gt;
+    &lt;h1 class=&quot;school-title&quot;&gt;Cebu Eastern College&lt;/h1&gt;
+    &lt;p class=&quot;school-subtitle&quot;&gt;CEBU CITY, PHILIPPINES&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;!-- Simulated greeting from video when logged in --&gt;
+    &lt;div id=&quot;userGreeting&quot; class=&quot;user-greeting&quot; aria-live=&quot;polite&quot;&gt;
+    Welcome, Admin
+    &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;!-- NAVIGATION BAR (Navy Blue bar below logo) --&gt;
+&lt;nav class=&quot;nav-wrapper&quot; aria-label=&quot;Main Navigation&quot;&gt;
+    &lt;div class=&quot;nav-container&quot;&gt;
+    &lt;button class=&quot;mobile-nav-toggle&quot; id=&quot;mobileMenuBtn&quot; aria-label=&quot;Toggle navigation menu&quot; aria-expanded=&quot;false&quot;&gt;
+        ☰
+    &lt;/button&gt;
+
+    &lt;ul class=&quot;nav-menu&quot; id=&quot;navMenu&quot;&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#philosophy&quot; class=&quot;nav-link&quot;&gt;Philosophy&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#objectives&quot; class=&quot;nav-link&quot;&gt;Objectives&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#mission-vision&quot; class=&quot;nav-link&quot;&gt;Mission and Vision&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;&lt;a href=&quot;#contact&quot; class=&quot;nav-link&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;!-- Opens modal as shown in video --&gt;
+        &lt;button id=&quot;loginNavBtn&quot; class=&quot;nav-link login-btn-nav&quot;&gt;Login&lt;/button&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+        &lt;!-- Replaces Login on auth --&gt;
+        &lt;button id=&quot;logoutNavBtn&quot; class=&quot;nav-link logout-btn-nav&quot;&gt;Logout&lt;/button&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;!-- MAIN HERO SECTION --&gt;
+&lt;main&gt;
+    &lt;section class=&quot;hero-section&quot; aria-label=&quot;Hero Welcome Banner&quot;&gt;
+    &lt;div class=&quot;hero-box&quot;&gt;
+        &lt;h2 class=&quot;hero-headline&quot;&gt;Welcome Cebu Easternians!&lt;/h2&gt;
+        &lt;p class=&quot;hero-description&quot;&gt;
+        Empowering students through academic excellence, ethical discipline, and comprehensive character formation. Discover your potential with our legacy of quality education.
+        &lt;/p&gt;
+        &lt;div class=&quot;hero-actions&quot;&gt;
+        &lt;button id=&quot;heroPortalBtn&quot; class=&quot;btn btn-primary&quot;&gt;Access CEC Portal&lt;/button&gt;
+        &lt;a href=&quot;#mission-vision&quot; class=&quot;btn btn-outline&quot;&gt;Discover Our Mission&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- PHILOSOPHY SECTION --&gt;
+    &lt;section id=&quot;philosophy&quot; class=&quot;content-section&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;div class=&quot;section-header&quot;&gt;
+        &lt;h2 class=&quot;section-title&quot;&gt;Our Philosophy&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-grid&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-icon&quot;&gt;🏛️&lt;/div&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;Holistic Human Formation&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+            Cebu Eastern College believes in the holistic cultivation of every student—harmonizing intellectual strength, physical well-being, moral integrity, and social responsibility.
+        &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-icon&quot;&gt;📚&lt;/div&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;Dedication to Truth&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+            Education is a steadfast journey in pursuit of knowledge and truth. We encourage inquisitive minds that engage critically and constructively with their world.
+        &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-icon&quot;&gt;🤝&lt;/div&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;Community &amp; Heritage&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+            Rooted in rich historical heritage, the institution nurtures graduates who respect cultural values, embrace innovation, and contribute constructively to Philippine society.
+        &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- OBJECTIVES SECTION --&gt;
+    &lt;section id=&quot;objectives&quot; class=&quot;content-section&quot; style=&quot;background-color: var(--white); max-width: 100%;&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;div style=&quot;max-width: 1100px; margin: 0 auto; padding: 0 1.5rem;&quot;&gt;
+        &lt;div class=&quot;section-header&quot;&gt;
+        &lt;h2 class=&quot;section-title&quot;&gt;Educational Objectives&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card-grid&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;h3 class=&quot;card-title&quot;&gt;1. Academic Competence&lt;/h3&gt;
+            &lt;p class=&quot;card-text&quot;&gt;Deliver rigorous instructional curricula aligned with modern industrial and academic standards to cultivate mastery in every discipline.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;h3 class=&quot;card-title&quot;&gt;2. Character Development&lt;/h3&gt;
+            &lt;p class=&quot;card-text&quot;&gt;Instill the core virtues of discipline, empathy, teamwork, and accountability across all curricular and co-curricular programs.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;h3 class=&quot;card-title&quot;&gt;3. Technological Fluency&lt;/h3&gt;
+            &lt;p class=&quot;card-text&quot;&gt;Equip learners with modern digital competencies, research skills, and collaborative tools necessary for 21st-century workplaces.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- MISSION AND VISION SECTION --&gt;
+    &lt;section id=&quot;mission-vision&quot; class=&quot;content-section&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;div class=&quot;section-header&quot;&gt;
+        &lt;h2 class=&quot;section-title&quot;&gt;Mission and Vision&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-grid&quot; style=&quot;grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-icon&quot;&gt;🎯&lt;/div&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;Institutional Vision&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+            Cebu Eastern College envisions itself as a premier center of learning dedicated to cultivating graduates who are intellectually proficient, socially committed, morally upright, and globally competitive.
+        &lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;card&quot;&gt;
+        &lt;div class=&quot;card-icon&quot;&gt;🚀&lt;/div&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;Institutional Mission&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+            To provide high-quality, inclusive, and learner-centered basic and higher education programs that foster academic distinction, leadership, lifelong learning, and dedicated civic service.
+        &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- CONTACT SECTION --&gt;
+    &lt;section id=&quot;contact&quot; class=&quot;content-section&quot; tabindex=&quot;-1&quot;&gt;
+    &lt;div class=&quot;section-header&quot;&gt;
+        &lt;h2 class=&quot;section-title&quot;&gt;Contact Us&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;contact-container&quot;&gt;
+        &lt;div&gt;
+        &lt;h3 style=&quot;color: var(--primary-blue); margin-bottom: 1.5rem;&quot;&gt;Get in Touch&lt;/h3&gt;
+        &lt;div class=&quot;contact-info-item&quot;&gt;
+            &lt;span style=&quot;font-size: 1.4rem;&quot;&gt;📍&lt;/span&gt;
+            &lt;div&gt;
+            &lt;strong&gt;Campus Address:&lt;/strong&gt;
+            &lt;p&gt;Leon Kilat St., Cebu City, 6000 Cebu, Philippines&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;contact-info-item&quot;&gt;
+            &lt;span style=&quot;font-size: 1.4rem;&quot;&gt;✉️&lt;/span&gt;
+            &lt;div&gt;
+            &lt;strong&gt;Email Inquiries:&lt;/strong&gt;
+            &lt;p&gt;info@cebueasterncollege.edu.ph&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;contact-info-item&quot;&gt;
+            &lt;span style=&quot;font-size: 1.4rem;&quot;&gt;📞&lt;/span&gt;
+            &lt;div&gt;
+            &lt;strong&gt;Phone Number:&lt;/strong&gt;
+            &lt;p&gt;(032) 256-2580 / (032) 412-3456&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;contact-info-item&quot;&gt;
+            &lt;span style=&quot;font-size: 1.4rem;&quot;&gt;🕒&lt;/span&gt;
+            &lt;div&gt;
+            &lt;strong&gt;Registrar Office Hours:&lt;/strong&gt;
+            &lt;p&gt;Monday – Friday: 8:00 AM – 5:00 PM&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;form class=&quot;contact-form&quot; id=&quot;contactForm&quot; onsubmit=&quot;event.preventDefault(); alert(&#x27;Inquiry demo form submitted successfully.&#x27;); this.reset();&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;form-label&quot; for=&quot;contactName&quot;&gt;Full Name&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;contactName&quot; class=&quot;form-control&quot; placeholder=&quot;e.g. Maria Santos&quot; required&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;form-label&quot; for=&quot;contactEmail&quot;&gt;Email Address&lt;/label&gt;
+            &lt;input type=&quot;email&quot; id=&quot;contactEmail&quot; class=&quot;form-control&quot; placeholder=&quot;maria@example.com&quot; required&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;form-label&quot; for=&quot;contactMsg&quot;&gt;Message / Inquiry&lt;/label&gt;
+            &lt;textarea id=&quot;contactMsg&quot; class=&quot;form-control&quot; rows=&quot;4&quot; placeholder=&quot;How can we assist you?&quot; required&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-submit&quot;&gt;Send Message&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;!-- LOGIN MODAL (Replicating the demo video&#x27;s modal functionality) --&gt;
+&lt;div class=&quot;modal-overlay&quot; id=&quot;loginModal&quot; role=&quot;dialog&quot; aria-modal=&quot;true&quot; aria-labelledby=&quot;modalTitle&quot;&gt;
+    &lt;div class=&quot;modal-content&quot;&gt;
+    &lt;button class=&quot;modal-close-btn js-close-modal&quot; aria-label=&quot;Close login dialog&quot;&gt;&amp;times;&lt;/button&gt;
+    
+    &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;svg class=&quot;modal-logo&quot; viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;48&quot; fill=&quot;#FFFFFF&quot; stroke=&quot;#080078&quot; stroke-width=&quot;4&quot;/&gt;
+        &lt;polygon points=&quot;50,15 62,38 88,38 67,54 75,78 50,62 25,78 33,54 12,38 38,38&quot; fill=&quot;#fbbf24&quot; stroke=&quot;#080078&quot; stroke-width=&quot;1.5&quot;/&gt;
+        &lt;text x=&quot;50&quot; y=&quot;86&quot; text-anchor=&quot;middle&quot; font-size=&quot;9&quot; font-weight=&quot;bold&quot; fill=&quot;#080078&quot;&gt;CEC&lt;/text&gt;
+        &lt;/svg&gt;
+        &lt;h3 class=&quot;modal-title&quot; id=&quot;modalTitle&quot;&gt;CEC PORTAL&lt;/h3&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;div id=&quot;loginAlert&quot; class=&quot;modal-alert&quot; role=&quot;alert&quot;&gt;Incorrect username or password.&lt;/div&gt;
+
+        &lt;form id=&quot;modalLoginForm&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;form-label&quot; for=&quot;modalUsername&quot;&gt;Username&lt;/label&gt;
+            &lt;input type=&quot;text&quot; id=&quot;modalUsername&quot; class=&quot;form-control&quot; placeholder=&quot;Enter Username (demo: admin)&quot; required autocomplete=&quot;username&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;label class=&quot;form-label&quot; for=&quot;modalPassword&quot;&gt;Password&lt;/label&gt;
+            &lt;input type=&quot;password&quot; id=&quot;modalPassword&quot; class=&quot;form-control&quot; placeholder=&quot;Enter Password (demo: 123)&quot; required autocomplete=&quot;current-password&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;label class=&quot;checkbox-row&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;rememberMe&quot;&gt;
+            &lt;span&gt;Remember me&lt;/span&gt;
+        &lt;/label&gt;
+
+        &lt;button type=&quot;submit&quot; class=&quot;btn-submit&quot; id=&quot;submitLoginBtn&quot;&gt;Login&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;modal-footer-links&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;btn btn-outline js-close-modal&quot; style=&quot;color: var(--dark-text); border-color: var(--border-color); padding: 0.4rem 0.8rem; font-size: 0.8rem;&quot;&gt;Cancel&lt;/button&gt;
+        &lt;a href=&quot;login.html&quot; title=&quot;Go to full portal page&quot;&gt;Open Full Portal &amp;rarr;&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- SITE FOOTER --&gt;
+&lt;footer class=&quot;site-footer&quot;&gt;
+    &lt;div class=&quot;footer-container&quot;&gt;
+    &lt;div&gt;
+        &lt;h4 style=&quot;color: var(--white); margin-bottom: 0.5rem;&quot;&gt;Cebu Eastern College&lt;/h4&gt;
+        &lt;p&gt;Serving quality Chinese-Filipino education with honors since 1915.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;a href=&quot;login.html&quot; style=&quot;color: #fbbf24; text-decoration: none; font-weight: 600;&quot;&gt;Student Portal Login&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer-bottom&quot;&gt;
+    &amp;copy; 2026 Cebu Eastern College. All rights reserved. (Academic Project Demonstration)
+    &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <div class="codehead"><span>login.html</span><button class="copy" type="button" data-target="code-login">Copy</button></div>
+<pre class="tall"><code id="code-login">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Student Portal Login — Cebu Eastern College&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+  &lt;style&gt;
+    .login-page-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, #080078 0%, #17179B 100%);
+    }
+    .portal-card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    }
+    .portal-card .school-logo {
+      margin: 0 auto 1rem;
+      display: block;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;login-page-container&quot;&gt;
+    &lt;div class=&quot;portal-card&quot;&gt;
+      &lt;svg class=&quot;school-logo&quot; viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;48&quot; fill=&quot;#FFFFFF&quot; stroke=&quot;#080078&quot; stroke-width=&quot;4&quot;/&gt;
+        &lt;polygon points=&quot;50,15 62,38 88,38 67,54 75,78 50,62 25,78 33,54 12,38 38,38&quot; fill=&quot;#fbbf24&quot; stroke=&quot;#080078&quot; stroke-width=&quot;1.5&quot;/&gt;
+        &lt;text x=&quot;50&quot; y=&quot;86&quot; text-anchor=&quot;middle&quot; font-size=&quot;9&quot; font-weight=&quot;bold&quot; fill=&quot;#080078&quot;&gt;CEC&lt;/text&gt;
+      &lt;/svg&gt;
+      &lt;h2 style=&quot;text-align: center; color: var(--primary-blue); font-size: 1.5rem; margin-bottom: 0.25rem;&quot;&gt;CEC STUDENT PORTAL&lt;/h2&gt;
+      &lt;p style=&quot;text-align: center; color: var(--muted-text); font-size: 0.85rem; margin-bottom: 1.5rem;&quot;&gt;Official Academic Management Portal&lt;/p&gt;
+
+      &lt;div id=&quot;pageLoginAlert&quot; class=&quot;modal-alert&quot; role=&quot;alert&quot;&gt;Invalid credentials. Use demo: admin / 123&lt;/div&gt;
+
+      &lt;form id=&quot;standaloneLoginForm&quot;&gt;
+        &lt;div class=&quot;form-group&quot; style=&quot;margin-bottom: 1rem;&quot;&gt;
+          &lt;label class=&quot;form-label&quot; for=&quot;pageUser&quot;&gt;Student ID or Username&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;pageUser&quot; class=&quot;form-control&quot; placeholder=&quot;Enter username (admin)&quot; required autocomplete=&quot;username&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot; style=&quot;margin-bottom: 1rem;&quot;&gt;
+          &lt;label class=&quot;form-label&quot; for=&quot;pagePass&quot;&gt;Password&lt;/label&gt;
+          &lt;input type=&quot;password&quot; id=&quot;pagePass&quot; class=&quot;form-control&quot; placeholder=&quot;Enter password (123)&quot; required autocomplete=&quot;current-password&quot;&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn-submit&quot; style=&quot;margin-top: 0.5rem;&quot;&gt;Access Dashboard&lt;/button&gt;
+      &lt;/form&gt;
+
+      &lt;div style=&quot;text-align: center; margin-top: 1.5rem;&quot;&gt;
+        &lt;a href=&quot;index.html&quot; style=&quot;color: var(--primary-blue); text-decoration: none; font-size: 0.875rem;&quot;&gt;&amp;larr; Back to Public Homepage&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<div class="codehead"><span>dashboard.html</span><button class="copy" type="button" data-target="code-dashboard">Copy</button></div>
+<pre class="tall"><code id="code-dashboard">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Student Dashboard — Cebu Eastern College&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- DASHBOARD TOP BAR --&gt;
+  &lt;header class=&quot;site-header&quot; style=&quot;display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 2rem;&quot;&gt;
+    &lt;div style=&quot;display: flex; align-items: center; gap: 0.75rem;&quot;&gt;
+      &lt;svg class=&quot;school-logo&quot; style=&quot;width: 42px; height: 42px;&quot; viewBox=&quot;0 0 100 100&quot;&gt;
+        &lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;48&quot; fill=&quot;#FFFFFF&quot; stroke=&quot;#080078&quot; stroke-width=&quot;4&quot;/&gt;
+        &lt;polygon points=&quot;50,15 62,38 88,38 67,54 75,78 50,62 25,78 33,54 12,38 38,38&quot; fill=&quot;#fbbf24&quot;/&gt;
+      &lt;/svg&gt;
+      &lt;span style=&quot;font-weight: 800; color: var(--primary-blue); font-size: 1.1rem;&quot;&gt;CEC STUDENT PORTAL&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button id=&quot;dashLogoutBtn&quot; class=&quot;btn btn-outline&quot; style=&quot;color: var(--primary-blue); border-color: var(--primary-blue); padding: 0.4rem 1rem;&quot;&gt;Log Out&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;!-- DASHBOARD WORKSPACE --&gt;
+  &lt;div class=&quot;dashboard-layout&quot;&gt;
+    &lt;aside class=&quot;dashboard-sidebar&quot;&gt;
+      &lt;div class=&quot;profile-card&quot;&gt;
+        &lt;div class=&quot;profile-avatar&quot;&gt;AD&lt;/div&gt;
+        &lt;div class=&quot;profile-name&quot; id=&quot;dashStudentName&quot;&gt;Admin Student&lt;/div&gt;
+        &lt;div class=&quot;profile-id&quot;&gt;ID: 2026-CEC-0418&lt;/div&gt;
+        &lt;span style=&quot;display: inline-block; background: #dcfce7; color: #166534; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 999px; font-weight: 600; margin-top: 0.5rem;&quot;&gt;Regular Student&lt;/span&gt;
+      &lt;/div&gt;
+
+      &lt;ul class=&quot;sidebar-nav&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;active&quot;&gt;📊 Overview&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#schedule&quot;&gt;📅 Class Schedule&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#grades&quot;&gt;📝 Midterm Grades&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;🌐 View Public Website&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/aside&gt;
+
+    &lt;main class=&quot;dashboard-main&quot;&gt;
+      &lt;div class=&quot;dashboard-header&quot;&gt;
+        &lt;h1&gt;Welcome Back, &lt;span id=&quot;dashWelcomeUser&quot;&gt;Easternian&lt;/span&gt;!&lt;/h1&gt;
+        &lt;p style=&quot;color: var(--muted-text);&quot;&gt;First Semester, Academic Year 2026–2027&lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- ANNOUNCEMENTS --&gt;
+      &lt;div class=&quot;card&quot; style=&quot;margin-bottom: 2rem; border-top-color: #fbbf24;&quot;&gt;
+        &lt;h3 class=&quot;card-title&quot;&gt;📢 Campus Announcements&lt;/h3&gt;
+        &lt;p class=&quot;card-text&quot;&gt;
+          &lt;strong&gt;Midterm Examination Schedule:&lt;/strong&gt; Examinations commence on October 26. Ensure clearance has been stamped by the accounting office prior to exam dates.
+        &lt;/p&gt;
+      &lt;/div&gt;
+
+      &lt;!-- ENROLLED COURSES &amp; SCHEDULE --&gt;
+      &lt;h3 style=&quot;color: var(--primary-blue); margin-bottom: 0.75rem;&quot; id=&quot;schedule&quot;&gt;Enrolled Classes&lt;/h3&gt;
+      &lt;table class=&quot;data-table&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Course Code&lt;/th&gt;
+            &lt;th&gt;Description&lt;/th&gt;
+            &lt;th&gt;Units&lt;/th&gt;
+            &lt;th&gt;Schedule&lt;/th&gt;
+            &lt;th&gt;Room&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;IT 311&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Web Systems and Technologies 2&lt;/td&gt;
+            &lt;td&gt;3.0&lt;/td&gt;
+            &lt;td&gt;MWF 09:00 - 10:00 AM&lt;/td&gt;
+            &lt;td&gt;Lab 304&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;CS 224&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Database Management Systems&lt;/td&gt;
+            &lt;td&gt;3.0&lt;/td&gt;
+            &lt;td&gt;TTH 01:00 - 02:30 PM&lt;/td&gt;
+            &lt;td&gt;Lab 201&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;&lt;strong&gt;ENG 102&lt;/strong&gt;&lt;/td&gt;
+            &lt;td&gt;Purposive Communication&lt;/td&gt;
+            &lt;td&gt;3.0&lt;/td&gt;
+            &lt;td&gt;MWF 11:00 - 12:00 PM&lt;/td&gt;
+            &lt;td&gt;Room 412&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;!-- GRADES RECORD --&gt;
+      &lt;h3 style=&quot;color: var(--primary-blue); margin: 2rem 0 0.75rem;&quot; id=&quot;grades&quot;&gt;Academic Standing (Sample Records)&lt;/h3&gt;
+      &lt;table class=&quot;data-table&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Subject&lt;/th&gt;
+            &lt;th&gt;Midterm Mark&lt;/th&gt;
+            &lt;th&gt;Remarks&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr&gt;
+            &lt;td&gt;IT 311 - Web Systems 2&lt;/td&gt;
+            &lt;td&gt;1.25&lt;/td&gt;
+            &lt;td&gt;&lt;span style=&quot;color: var(--success); font-weight: 700;&quot;&gt;PASSED&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;CS 224 - DBMS&lt;/td&gt;
+            &lt;td&gt;1.50&lt;/td&gt;
+            &lt;td&gt;&lt;span style=&quot;color: var(--success); font-weight: 700;&quot;&gt;PASSED&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;ENG 102 - Communication&lt;/td&gt;
+            &lt;td&gt;1.30&lt;/td&gt;
+            &lt;td&gt;&lt;span style=&quot;color: var(--success); font-weight: 700;&quot;&gt;PASSED&lt;/span&gt;&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/main&gt;
+  &lt;/div&gt;
+
+  &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<div class="codehead"><span>style.css</span><button class="copy" type="button" data-target="code-css">Copy</button></div>
+<pre class="tall"><code id="code-css">/* ==========================================================================
+   CEBU EASTERN COLLEGE - OFFICIAL STYLESHEET
+   Colors: Primary Navy #080078 | Accent Navy #17179B | Background #F5F7FB
+   ========================================================================== */
+
+:root {
+  --primary-blue: #080078;
+  --secondary-blue: #17179B;
+  --hover-blue: #2323b8;
+  --dark-text: #1e293b;
+  --muted-text: #64748b;
+  --light-bg: #f8fafc;
+  --white: #ffffff;
+  --border-color: #e2e8f0;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 25px -3px rgba(0,0,0,0.2);
+  --transition: all 0.25s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--dark-text);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+body.is-fixed {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   HEADER &amp; BRANDING (Centered logo matching video demo)
+   ========================================================================== */
+.site-header {
+  background-color: var(--white);
+  padding: 1.25rem 1rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.logo-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.school-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  transition: transform var(--transition);
+}
+
+.school-logo:hover {
+  transform: scale(1.03);
+}
+
+.school-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+.school-subtitle {
+  font-size: 0.85rem;
+  color: var(--muted-text);
+  letter-spacing: 1px;
+}
+
+/* User Greeting Banner (from demo video: Welcome Admin) */
+.user-greeting {
+  display: none;
+  background-color: #eef2ff;
+  color: var(--primary-blue);
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  margin: 0.5rem auto 0;
+  width: fit-content;
+}
+
+.user-greeting.is-active {
+  display: inline-block;
+}
+
+/* ==========================================================================
+   MAIN NAVIGATION (Solid Dark Navy bar directly below logo)
+   ========================================================================== */
+.nav-wrapper {
+  background-color: var(--primary-blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-md);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  padding: 1rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  background-color: var(--secondary-blue);
+  color: #fbbf24;
+  outline: none;
+}
+
+/* State controls for Login / Logout buttons */
+.logout-btn-nav {
+  display: none;
+}
+
+.logout-btn-nav.is-active {
+  display: block;
+}
+
+.login-btn-nav.is-hidden {
+  display: none;
+}
+
+/* Mobile Toggle */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ==========================================================================
+   HERO BANNER
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e38;
+  background-image: linear-gradient(rgba(8, 0, 120, 0.45), rgba(8, 0, 120, 0.6)), 
+                    url(&#x27;https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1600&amp;q=80&#x27;);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 1.5rem;
+  color: var(--white);
+}
+
+.hero-box {
+  background-color: rgba(8, 0, 120, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 2.5rem 3rem;
+  border-radius: 8px;
+  max-width: 850px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(4px);
+}
+
+.hero-headline {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #e2e8f0;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background-color: #fbbf24;
+  color: #0f172a;
+}
+
+.btn-primary:hover {
+  background-color: #f59e0b;
+}
+
+.btn-outline {
+  border-color: var(--white);
+  color: var(--white);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--white);
+  color: var(--primary-blue);
+}
+
+/* ==========================================================================
+   ACADEMIC CONTENT SECTIONS
+   ========================================================================== */
+.content-section {
+  padding: 5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: &quot;&quot;;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #fbbf24;
+  border-radius: 2px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-top: 4px solid var(--primary-blue);
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--secondary-blue);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  color: var(--dark-text);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* Contact Grid */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-item strong {
+  display: block;
+  color: var(--primary-blue);
+  font-size: 1rem;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--dark-text);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(8, 0, 120, 0.15);
+}
+
+/* ==========================================================================
+   LOGIN MODAL (Recreated directly from the demo video)
+   ========================================================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  backdrop-filter: blur(2px);
+}
+
+.modal-overlay.is-active {
+  display: flex;
+}
+
+.modal-content {
+  background-color: var(--white);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close-btn:hover {
+  color: #0f172a;
+}
+
+.modal-header {
+  text-align: center;
+  padding: 2rem 1.5rem 1rem;
+}
+
+.modal-logo {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.modal-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-blue);
+  letter-spacing: 0.5px;
+}
+
+.modal-body {
+  padding: 1rem 2rem 2rem;
+}
+
+.modal-alert {
+  display: none;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: #fee2e2;
+  color: var(--danger);
+  border: 1px solid #fca5a5;
+}
+
+.modal-body .form-group {
+  margin-bottom: 1.25rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color var(--transition);
+}
+
+.btn-submit:hover {
+  background-color: var(--secondary-blue);
+}
+
+.modal-footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8fafc;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85rem;
+}
+
+.modal-footer-links a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.modal-footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   DASHBOARD STYLES (Student Portal)
+   ========================================================================== */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  min-height: calc(100vh - 170px);
+}
+
+.dashboard-sidebar {
+  background-color: var(--white);
+  border-right: 1px solid var(--border-color);
+  padding: 2rem 1.25rem;
+}
+
+.profile-card {
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #e0e7ff;
+  color: var(--primary-blue);
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin: 0 auto 0.75rem;
+}
+
+.profile-name {
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.profile-id {
+  font-size: 0.8rem;
+  color: var(--muted-text);
+}
+
+.sidebar-nav {
+  list-style: none;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--dark-text);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-bottom: 0.25rem;
+  transition: var(--transition);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  background-color: #eef2ff;
+  color: var(--primary-blue);
+}
+
+.dashboard-main {
+  padding: 2.5rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  font-size: 1.75rem;
+  color: var(--primary-blue);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.85rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+  background-color: #f1f5f9;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  background-color: #05004a;
+  color: #94a3b8;
+  padding: 3rem 1.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+  max-width: 1100px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 868px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-blue);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .nav-menu.is-open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+  }
+}</code></pre>
+
+<div class="codehead"><span>script.js</span><button class="copy" type="button" data-target="code-js">Copy</button></div>
+<pre class="tall"><code id="code-js">/**
+ * CEBU EASTERN COLLEGE - CLIENT-SIDE CONTROLLER
+ * Handles navigation, mobile drawer, modal interaction, and simulated authentication.
+ */
+
+document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
+  // Demo Authentication Key
+  const AUTH_KEY = &quot;cec_session_active&quot;;
+  const USER_KEY = &quot;cec_user_name&quot;;
+
+  // Elements
+  const body = document.getElementById(&quot;mainBody&quot;) || document.body;
+  const loginModal = document.getElementById(&quot;loginModal&quot;);
+  const loginNavBtn = document.getElementById(&quot;loginNavBtn&quot;);
+  const logoutNavBtn = document.getElementById(&quot;logoutNavBtn&quot;);
+  const heroPortalBtn = document.getElementById(&quot;heroPortalBtn&quot;);
+  const userGreeting = document.getElementById(&quot;userGreeting&quot;);
+  const modalCloseBtns = document.querySelectorAll(&quot;.js-close-modal&quot;);
+  const modalForm = document.getElementById(&quot;modalLoginForm&quot;);
+  const modalAlert = document.getElementById(&quot;loginAlert&quot;);
+  const standaloneForm = document.getElementById(&quot;standaloneLoginForm&quot;);
+  const dashLogoutBtn = document.getElementById(&quot;dashLogoutBtn&quot;);
+  const mobileMenuBtn = document.getElementById(&quot;mobileMenuBtn&quot;);
+  const navMenu = document.getElementById(&quot;navMenu&quot;);
+
+  // --- 1. STATE INITIALIZATION ---
+  function updateAuthState() {
+    const isLoggedIn = sessionStorage.getItem(AUTH_KEY) === &quot;true&quot;;
+    const username = sessionStorage.getItem(USER_KEY) || &quot;Admin&quot;;
+
+    if (loginNavBtn) {
+      if (isLoggedIn) {
+        loginNavBtn.classList.add(&quot;is-hidden&quot;);
+        if (logoutNavBtn) logoutNavBtn.classList.add(&quot;is-active&quot;);
+        if (userGreeting) {
+          userGreeting.textContent = `Welcome, ${username}`;
+          userGreeting.classList.add(&quot;is-active&quot;);
+        }
+      } else {
+        loginNavBtn.classList.remove(&quot;is-hidden&quot;);
+        if (logoutNavBtn) logoutNavBtn.classList.remove(&quot;is-active&quot;);
+        if (userGreeting) userGreeting.classList.remove(&quot;is-active&quot;);
+      }
+    }
+
+    // Dashboard Route Protection
+    if (window.location.pathname.endsWith(&quot;dashboard.html&quot;)) {
+      if (!isLoggedIn) {
+        window.location.replace(&quot;login.html&quot;);
+      } else {
+        const welcomeSpan = document.getElementById(&quot;dashWelcomeUser&quot;);
+        const nameSpan = document.getElementById(&quot;dashStudentName&quot;);
+        if (welcomeSpan) welcomeSpan.textContent = username;
+        if (nameSpan) nameSpan.textContent = `${username} (Student)`;
+      }
+    }
+  }
+
+  // --- 2. MODAL CONTROLS (As in Demo Video) ---
+  function openModal() {
+    if (!loginModal) return;
+    loginModal.classList.add(&quot;is-active&quot;);
+    body.classList.add(&quot;is-fixed&quot;);
+    if (modalAlert) modalAlert.style.display = &quot;none&quot;;
+    const userField = document.getElementById(&quot;modalUsername&quot;);
+    if (userField) userField.focus();
+  }
+
+  function closeModal() {
+    if (!loginModal) return;
+    loginModal.classList.remove(&quot;is-active&quot;);
+    body.classList.remove(&quot;is-fixed&quot;);
+  }
+
+  if (loginNavBtn) loginNavBtn.addEventListener(&quot;click&quot;, openModal);
+  if (heroPortalBtn) heroPortalBtn.addEventListener(&quot;click&quot;, openModal);
+
+  modalCloseBtns.forEach(btn =&gt; {
+    btn.addEventListener(&quot;click&quot;, closeModal);
+  });
+
+  if (loginModal) {
+    loginModal.addEventListener(&quot;click&quot;, (e) =&gt; {
+      if (e.target === loginModal) closeModal();
+    });
+  }
+
+  // Escape key closes modal
+  document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
+    if (e.key === &quot;Escape&quot; &amp;&amp; loginModal &amp;&amp; loginModal.classList.contains(&quot;is-active&quot;)) {
+      closeModal();
+    }
+  });
+
+  // --- 3. DEMO AUTHENTICATION LOGIC ---
+  // Video credentials: username &quot;admin&quot;, password &quot;123&quot;
+  function validateDemoLogin(username, password) {
+    const cleanUser = username.trim();
+    const cleanPass = password.trim();
+    return cleanUser === &quot;admin&quot; &amp;&amp; cleanPass === &quot;123&quot;;
+  }
+
+  // A. Modal Form Submission
+  if (modalForm) {
+    modalForm.addEventListener(&quot;submit&quot;, (e) =&gt; {
+      e.preventDefault();
+      const user = document.getElementById(&quot;modalUsername&quot;).value;
+      const pass = document.getElementById(&quot;modalPassword&quot;).value;
+
+      if (validateDemoLogin(user, pass)) {
+        sessionStorage.setItem(AUTH_KEY, &quot;true&quot;);
+        sessionStorage.setItem(USER_KEY, user);
+        closeModal();
+        updateAuthState();
+        // Option: Redirect to dashboard or stay with &quot;Welcome Admin&quot; banner
+        const redirectToDash = confirm(&quot;Login successful! Would you like to enter your Student Dashboard?&quot;);
+        if (redirectToDash) {
+          window.location.href = &quot;dashboard.html&quot;;
+        }
+      } else {
+        if (modalAlert) {
+          modalAlert.textContent = &quot;Incorrect username or password. (Hint: admin / 123)&quot;;
+          modalAlert.style.display = &quot;block&quot;;
+        }
+      }
+    });
+  }
+
+  // B. Standalone Login Page Submission
+  if (standaloneForm) {
+    standaloneForm.addEventListener(&quot;submit&quot;, (e) =&gt; {
+      e.preventDefault();
+      const user = document.getElementById(&quot;pageUser&quot;).value;
+      const pass = document.getElementById(&quot;pagePass&quot;).value;
+      const alertBox = document.getElementById(&quot;pageLoginAlert&quot;);
+
+      if (validateDemoLogin(user, pass)) {
+        sessionStorage.setItem(AUTH_KEY, &quot;true&quot;);
+        sessionStorage.setItem(USER_KEY, user);
+        window.location.href = &quot;dashboard.html&quot;;
+      } else {
+        if (alertBox) {
+          alertBox.textContent = &quot;Invalid credentials. Use demo: admin / 123&quot;;
+          alertBox.style.display = &quot;block&quot;;
+        }
+      }
+    });
+  }
+
+  // C. Logout Actions
+  function performLogout() {
+    sessionStorage.removeItem(AUTH_KEY);
+    sessionStorage.removeItem(USER_KEY);
+    updateAuthState();
+    if (window.location.pathname.endsWith(&quot;dashboard.html&quot;)) {
+      window.location.href = &quot;index.html&quot;;
+    }
+  }
+
+  if (logoutNavBtn) logoutNavBtn.addEventListener(&quot;click&quot;, performLogout);
+  if (dashLogoutBtn) dashLogoutBtn.addEventListener(&quot;click&quot;, performLogout);
+
+  // --- 4. RESPONSIVE MOBILE NAVIGATION ---
+  if (mobileMenuBtn &amp;&amp; navMenu) {
+    mobileMenuBtn.addEventListener(&quot;click&quot;, () =&gt; {
+      const isExpanded = mobileMenuBtn.getAttribute(&quot;aria-expanded&quot;) === &quot;true&quot;;
+      mobileMenuBtn.setAttribute(&quot;aria-expanded&quot;, !isExpanded);
+      navMenu.classList.toggle(&quot;is-open&quot;);
+    });
+
+    // Close menu when clicking link
+    navMenu.querySelectorAll(&quot;.nav-link&quot;).forEach(link =&gt; {
+      link.addEventListener(&quot;click&quot;, () =&gt; {
+        navMenu.classList.remove(&quot;is-open&quot;);
+        mobileMenuBtn.setAttribute(&quot;aria-expanded&quot;, &quot;false&quot;);
+      });
+    });
+  }
+
+  // Run initial state update
+  updateAuthState();
+});</code></pre>
+  </section>
+
+  <section class="panel" aria-labelledby="how-title">
+    <h2 id="how-title">What I did</h2>
+    <ul>
+      <li>Designed the website layout.</li>
+      <li>Organized school information.</li>
+      <li>Improved navigation to create a user-friendly school website and student portal.</li>
+    </ul>
+  </section>
+</main>
+
+<script>
+document.querySelectorAll(".copy").forEach(function(btn){
+  btn.addEventListener("click",function(){
+    var text=document.getElementById(btn.dataset.target).textContent;
+    var done=function(){btn.textContent="Copied";setTimeout(function(){btn.textContent="Copy"},1500)};
+    if(navigator.clipboard){navigator.clipboard.writeText(text).then(done).catch(function(){})}
+  });
+});
+</script>
+</body>
+</html>

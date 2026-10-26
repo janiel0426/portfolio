@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My Academic portfolio, undergraduate Information Technology student. Showcasing coursework, quizzes, projects, and skills.">
+  <title>Janiel Ponggot Jaralve | IT Student Portfolio</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- 6. NAVIGATION & HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#home" class="brand-link" aria-label="Portfolio Home">
+        <img 
+          src="images/logo.png" 
+          alt="Personal Monogram Logo" 
+          class="brand-logo-img"
+          width="40" 
+          height="40"
+          onerror="this.style.display='none'; document.getElementById('brand-fallback').style.display='inline-flex';"
+        >
+        <span id="brand-fallback" class="brand-fallback-icon" aria-hidden="true" style="display: none;">N</span>
+        <div class="brand-text-group">
+          <!-- EDITABLE: Replace placeholder with your real name -->
+          <span class="brand-name">JARALVE, JANIEL P.</span>
+          <span class="brand-role">IT Student & Developer</span>
+        </div>
+      </a>
+
+      <!-- Mobile Navigation Hamburger Button -->
+      <button 
+        type="button" 
+        class="nav-toggle" 
+        id="nav-toggle" 
+        aria-label="Toggle navigation menu" 
+        aria-expanded="false" 
+        aria-controls="primary-navigation"
+      >
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+      <!-- Primary Navigation Links -->
+      <nav id="primary-navigation" class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content">
+
+    <!-- 1. HOME / HERO SECTION -->
+    <section id="home" class="section hero-section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        
+        <!-- Hero Text Column -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="hero-badge">Aspiring IT Professional</span>
+          </div>
+
+          <!-- EDITABLE: Replace [Niel / Your Full Name] with your real name -->
+          <h1 id="hero-title" class="hero-title">
+            Hi, I'm <span class="text-teal">Janiel Ponggot Jaralve</span>
+          </h1>
+
+          <!-- EDITABLE: Replace with your personal welcome intro -->
+          <p class="hero-lead">
+            Welcome to my academic portfolio. I am an undergraduate Information Technology student dedicated to building clean, accessible web solutions, understanding computer networks, and developing practical software development skills.
+          </p>
+
+          <!-- EDITABLE: Adjust learning interests to match your courses -->
+          <div class="hero-interests">
+            <span class="interests-label">Core Learning Interests:</span>
+            <ul class="badge-list" aria-label="Learning interests">
+              <li class="badge">Web Systems &amp; Standards</li>
+              <li class="badge">Object-Oriented Programming</li>
+              <li class="badge">Database Management</li>
+              <li class="badge">Networking Fundamentals</li>
+            </ul>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Course Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+
+        <!-- Hero Profile Picture Column -->
+        <div class="hero-profile">
+          <div class="profile-image-card">
+            <div class="profile-frame">
+              <!-- Profile Picture: Save your portrait photo as images/profile.png -->
+              <img 
+                src="images/profile.png" 
+                alt="Portrait of [Niel / Your Full Name], undergraduate IT student" 
+                class="profile-img"
+                width="360" 
+                height="460"
+                onerror="this.src='images/profile-placeholder.svg';"
+              >
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="section about-section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-title" class="section-title">About Me</h2>
+          <p class="section-subtitle">
+            An overview of my academic progression, technical areas of study, and professional goals.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Card 1: Personal Introduction -->
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Personal Introduction</h3>
+            <!-- EDITABLE: Replace with your actual introduction -->
+            <p class="card-text"> 
+              I am an Information Technology student with a strong motivation to understand both client-facing applications and backend computing architecture. 
+              Through my college coursework and practical lab sessions, I enjoy translating theoretical computer science principles into structured, functional digital experiences.
+            </p>
+          </article>
+
+          <!-- Card 2: Educational Background -->
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Educational Background</h3>
+            <!-- EDITABLE: Replace with your actual university, major, and graduation year -->
+            <ul class="detail-list">
+              <li><strong>Degree:</strong> Bachelor of Science in Information Technology (BSIT)</li>
+              <li><strong>Current Standing:</strong> Undergraduate / 4th Year Student</li>
+              <li><strong>Institution:</strong> Cebu Eastern College </li>
+              <li><strong>Expected Graduation:</strong> Class of 2026 / 2027</li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Academic Interests -->
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="card-title">Interests &amp; Focus Areas</h3>
+            <!-- EDITABLE: Replace with your specific coursework interests -->
+            <p class="card-text">My current curriculum focuses on front-end web markup, responsive user interface styling, and system flow design. In my spare time, I practice clean coding habits, study documentation, and explore modern web standards.
+            </p>
+          </article>
+
+          <!-- Card 4: Career Goals -->
+          <article class="card about-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Career Goals</h3>
+            <!-- EDITABLE: Replace with your actual career goals -->
+            <p class="card-text">Upon graduation, I aim to pursue opportunities as a Junior Web Developer, IT Systems Associate, or Technical Support Engineer. My long-term goal is to build reliable, accessible software solutions while continually expanding my technical capabilities.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="section skills-section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="skills-title" class="section-title">Technical &amp; Professional Skills</h2>
+          <p class="section-subtitle">
+            My technical abilities and professional skills, developed through academic learning, hands-on projects, and continuous improvement.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill 1: HTML -->
+          <article class="card skill-card">
+            <div class="skill-header">
+              <h3 class="skill-title">HTML (HyperText Markup)</h3>
+              <span class="skill-category">Frontend</span>
+            </div>
+            <!-- EDITABLE: Adjust description to match your skills -->
+            <p class="skill-description">
+              Building web pages with semantic HTML5 tags, headings, lists, links, images, and simple forms.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Semantic HTML5</span>
+              <span class="tag">Forms</span>
+              <span class="tag">Basic Accessibility</span>
+            </div>
+          </article>
+
+          <!-- Skill 2: CSS -->
+          <article class="card skill-card">
+            <div class="skill-header">
+              <h3 class="skill-title">CSS (Cascading Style Sheets)</h3>
+              <span class="skill-category">Frontend</span>
+            </div>
+            <!-- EDITABLE: Adjust description to match your skills -->
+            <p class="skill-description">
+              Styling pages with colors, fonts, spacing, and layouts using Flexbox, plus basic responsive design with media queries.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Flexbox</span>
+              <span class="tag">Responsive Basics</span>
+              <span class="tag">CSS Variables</span>
+            </div>
+          </article>
+
+          <!-- Skill 3: JavaScript -->
+          <article class="card skill-card">
+            <div class="skill-header">
+              <h3 class="skill-title">JavaScript</h3>
+              <span class="skill-category">Scripting</span>
+            </div>
+            <!-- EDITABLE: Adjust description to match your skills -->
+            <p class="skill-description">
+              Learning to make pages interactive with variables, functions, events, and simple DOM changes like buttons and form checks.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">DOM Basics</span>
+              <span class="tag">Event Handling</span>
+              <span class="tag">ES6 Basics</span>
+            </div>
+          </article>
+
+          <!-- Skill 4: Programming Fundamentals -->
+          <article class="card skill-card">
+            <div class="skill-header">
+              <h3 class="skill-title">Programming Fundamentals</h3>
+              <span class="skill-category">Core Logic</span>
+            </div>
+            <!-- EDITABLE: Adjust description to match your skills -->
+            <p class="skill-description">
+              Practicing the basics of programming: variables, conditionals, loops, functions, and arrays.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Control Flow</span>
+              <span class="tag">functions</span>
+              <span class="tag">Data Types</span>
+            </div>
+          </article>
+
+          <!-- Skill 5: Troubleshooting -->
+          <article class="card skill-card">
+            <div class="skill-header">
+              <h3 class="skill-title">Troubleshooting &amp; Debugging</h3>
+              <span class="skill-category">Analytical</span>
+            </div>
+            <!-- EDITABLE: Adjust description to match your skills -->
+            <p class="skill-description">
+              Finding and fixing simple errors using the browser console and DevTools, and checking my pages on different screen sizes.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Browser DevTools</span>
+              <span class="tag">Console Log</span>
+              <span class="tag">Error Reading</span>
+            </div>
+          </article>
+
+          <!-- Skill 6: Communication -->
+          <article class="card skill-card">
+            <div class="skill-header">
+              <h3 class="skill-title">Technical Communication</h3>
+              <span class="skill-category">Professional</span>
+            </div>
+            <!-- EDITABLE: Adjust description to match your skills -->
+            <p class="skill-description">
+              Writing clear code comments and documentation, working with classmates on lab projects, and presenting my work.
+            </p>
+            <div class="skill-tags">
+              <span class="tag">Documentation</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Presentations</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION -->
+    <section id="projects" class="section projects-section" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="projects-title" class="section-title">Course Projects</h2>
+          <p class="section-subtitle">
+            A collection of academic projects and practical activities completed throughout my IT studies, showcasing my technical skills, problem-solving abilities, and continuous learning.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: QUIZ 1 -->
+          <article class="project-card">
+            <figure class="project-media">
+              <!-- Screenshot Placeholder: Replace 'images/project-quiz-1.svg' with your actual screenshot (e.g. 'images/quiz-1.png') -->
+              <video class="project-image" autoplay muted loop playsinline
+                 width="600" height="360" aria-label="Demo of the Item Manager WPF app">
+                <source src="video/Quiz1.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-badge">Quiz 1 Coursework</span>
+                <span class="project-status">Completed</span>
+              </div>
+              <!-- EDITABLE: Replace with your actual Quiz 1 Title -->
+              <h3 class="project-title">WPF application</h3>
+
+              <!-- EDITABLE: Describe your Quiz 1 topic and objectives -->
+              <div class="project-section-block">
+                <h4 class="block-heading">Description:</h4>
+                <p class="project-description"> A practical exam project for IT Elec 2. It’s a WPF desktop app for managing a list of items, with a TextBox, a ListBox, and Add and Remove buttons. It checks for empty input and for removing with nothing selected, and shows warning messages.
+                </p>
+              </div>
+
+              <!-- EDITABLE: Describe your exact contribution -->
+              <div class="project-section-block">
+                <h4 class="block-heading">My Contribution:</h4>
+                <p class="project-contribution">I built the window layout in XAML (Grid, StackPanel, ListBox). I wrote the C# click handlers for adding and removing items. I added input validation with warning message boxes, and placeholder text using the GotFocus and LostFocus events. I tested adding, removing, empty input, and nothing selected.
+                </p>
+              </div>
+
+              <!-- EDITABLE: Optional project links (demo, repo, or files) -->
+              <div class="project-links">
+                <!-- Replace '#' with your actual project link or remove if not needed -->
+                <a href="./pages/quiz1page.html" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">
+                  <span>View Project Code</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: QUIZ 2 -->
+          <article class="project-card">
+            <figure class="project-media">
+              <!-- Screenshot Placeholder: Replace 'images/project-quiz-2.svg' with your actual screenshot (e.g. 'images/quiz-2.png') -->
+              <video class="project-image" autoplay muted loop playsinline
+                 width="600" height="360" aria-label="Demo of the Cebu Eastern College - Website & Portal">
+                <source src="video/Quiz2.mp4" type="video/mp4">
+              </video>
+            </figure>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-badge">Quiz 2 Coursework</span>
+                <span class="project-status">Completed</span>
+              </div>
+              <!-- EDITABLE: Replace with your actual Quiz 2 Title -->
+              <h3 class="project-title">Cebu Eastern College - Website & Portal</h3>
+
+              <!-- EDITABLE: Describe your Quiz 2 topic and objectives -->
+              <div class="project-section-block">
+                <h4 class="block-heading">Description:</h4>
+                <p class="project-description">A website and portal project for Cebu Eastern College designed to provide school information, a user-friendly interface, and convenient access to academic resources and essential school services.
+                </p>
+              </div>
+
+              <!-- EDITABLE: Describe your exact contribution -->
+              <div class="project-section-block">
+                <h4 class="block-heading">My Contribution:</h4>
+                <p class="project-contribution">Contributed to website design, page layout, content organization, and improving user navigation for the Cebu Eastern College website and portal.
+                </p>
+              </div>
+
+              <!-- EDITABLE: Optional project links -->
+              <div class="project-links">
+                <!-- Replace '#' with your actual project link or remove if not needed -->
+                <a href="./pages/quiz2page.html" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">
+                  <span>View Project Code</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3: OPTIONAL SCHOOL PROJECT -->
+          <article class="project-card">
+            <figure class="project-media">
+              <!-- Screenshot Placeholder: Replace 'images/project-school-3.svg' with your actual screenshot -->
+              <img 
+                src="images/project.jpg" 
+                alt="Screenshot school project" 
+                class="project-image"
+                loading="lazy"
+                width="600"
+                height="360"
+              >
+            </figure>
+            <div class="project-content">
+              <div class="project-meta">
+                <span class="project-badge">Capstone</span>
+                <span class="project-status">In Progress</span>
+              </div>
+              <!-- EDITABLE: Replace with your actual project title -->
+              <h3 class="project-title">FireAlert AI: Smart Fire Severity Detection and Automated Dispatch 
+                                        Systemin Barangay Tejero, Cebu City
+              </h3>
+
+              <!-- EDITABLE: Describe your project -->
+              <div class="project-section-block">
+                <h4 class="block-heading">Description:</h4>
+                <p class="project-description">
+                  A capstone project that uses AI to analyze submitted fire images and classify fire severity as Low, Medium, or High. It uses incident location data to help barangay officials and fire responders assess reports and prioritize emergency response.
+                </p>
+              </div>
+
+              <!-- EDITABLE: Describe your contribution -->
+              <div class="project-section-block">
+                <h4 class="block-heading">My Contribution:</h4>
+                <p class="project-contribution">
+                  Contributed to research documentation, the review of related literature, system flowchart development, and planning the AI-based fire severity detection process. Collaborated with team members to define system features and improve the overall project workflow.
+                </p>
+              </div>
+
+              <!-- EDITABLE: Optional project link -->
+              <div class="project-links">
+                <!-- Replace '#' with your actual project link or remove if not needed -->
+                <a href="./pages/projectpage.html" class="btn btn-sm btn-outline" target="_blank" rel="noopener noreferrer">
+                  <span>View Project Code</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-tag">Direct Communication</p>
+          <h2 id="contact-title" class="section-title">Contact</h2>
+          <p class="section-subtitle">
+            Feel free to reach out regarding academic inquiries, lab collaborations, or entry-level opportunities.
+          </p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-card">
+            <h3 class="contact-card-title">Get in Touch Directly</h3>
+            <p class="contact-card-desc">
+              To guarantee your message reaches me directly without third-party form intermediaries, please use the direct email link or visit my profiles below:
+            </p>
+
+            <div class="contact-methods">
+              <!-- Primary Email Contact (Working mailto: link) -->
+              <div class="contact-method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Direct Email</span>
+                  <!-- EDITABLE: Replace placeholder email address in both the href and visible text -->
+                  <a href="mailto:your.email@example.edu" class="method-link">
+                    your.email@example.edu
+                  </a>
+                </div>
+              </div>
+
+              <!-- GitHub Profile Link (Optional) -->
+              <div class="contact-method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">GitHub Profile</span>
+                  <!-- EDITABLE: Replace with your actual GitHub username URL -->
+                  <a href="https://github.com/your-username" class="method-link" target="_blank" rel="noopener noreferrer">
+                    github.com/your-username
+                  </a>
+                </div>
+              </div>
+
+              <!-- Optional Professional Network Link (LinkedIn) -->
+              <div class="contact-method-item">
+                <div class="method-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">LinkedIn Profile (Optional)</span>
+                  <!-- EDITABLE: Replace with your actual LinkedIn URL or delete this block -->
+                  <a href="https://linkedin.com/in/your-profile" class="method-link" target="_blank" rel="noopener noreferrer">
+                    linkedin.com/in/your-profile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <img 
+            src="images/logo.png" 
+            alt="Logo" 
+            class="footer-logo-img" 
+            width="28" 
+            height="28"
+            onerror="this.style.display='none';"
+          >
+          <!-- EDITABLE: Replace [Niel / Your Full Name] with your real name -->
+          <p class="footer-author"><strong>[Niel / Your Full Name]</strong> &mdash; IT Undergraduate Student</p>
+        </div>
+        <p class="footer-copy">
+          &copy; <span id="current-year">2026</span> All rights reserved. Academic coursework portfolio.
+        </p>
+      </div>
+      <div class="footer-right">
+        <a href="#home" class="back-to-top" aria-label="Back to top of page">
+          <span>Back to Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
